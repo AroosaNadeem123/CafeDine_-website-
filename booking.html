@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table Booking</title>
+  <link rel="stylesheet" href="style.css"> <!-- Link to your existing CSS -->
+</head>
+<body>
+  <div class="hero">
+    <h1>Book Your Table</h1>
+    <form class="booking-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="tel" placeholder="Phone Number" required>
+      <input type="number" placeholder="Number of Guests" required>
+      <input type="datetime-local" required>
+      <button type="submit" class="cta-button">Confirm Booking</button>
+    </form>
+<!-- Thank You Message -->
+<div id="thank-you-message" style="display: none; color: green; margin-top: 20px;">
+  Thank you! Your booking has been received.
+</div>
+  </div>
+</body>
+</html>

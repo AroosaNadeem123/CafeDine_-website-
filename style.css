@@ -1,0 +1,708 @@
+/* Reset + Base */ 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #1e161f;
+  color: #f8f1e7;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: #1e161f;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  position: relative;
+}
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #f8f1e7;
+}
+.logo span {
+  color: #e6461a;
+  font-family: cursive;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #f8f1e7;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  margin-left: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #f8f1e7;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: #e6461a;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.brand-name {
+  font-size: 36px;
+  color: #e6461a;
+  font-family: cursive;
+}
+.hero h1 {
+  font-size: 48px;
+  font-weight: 800;
+  margin: 20px 0;
+  font-family: Georgia, serif;
+}
+.hero p {
+  font-size: 18px;
+  color: #e7d6c8;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+/* CTA Button */
+.cta-button {
+  background-color: #e6461a;
+  color: white;
+  font-size: 18px;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.cta-button:hover {
+  background-color: #c73712;
+}
+
+/* Services Section */
+.services-section {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  padding: 80px 0;
+}
+
+.service-card {
+  width: 30%;
+  padding: 40px 30px;
+  text-align: center;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.mid-card {
+  background-color: #f9f9f9;
+}
+
+.service-icon {
+  font-size: 48px;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.service-card p {
+  color: #777;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .services-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card {
+    width: 90%;
+    margin-bottom: 30px;
+  }
+}
+
+/* More media queries for overall responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    margin: 10px 0;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .text-section h1 {
+    font-size: 28px;
+  }
+
+  .carousel-track img {
+    width: 200px;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+/* About Section */
+.about-section {
+  padding: 80px 40px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.section-subtitle {
+  font-size: 20px;
+  color: #e6461a;
+  font-family: cursive;
+  margin-bottom: 10px;
+}
+
+.section-subtitle span {
+  font-weight: bold;
+}
+.section-title {
+  font-size: 36px;
+  color:black;
+  margin-bottom: 50px;
+  font-family: Georgia, serif;
+}
+
+/* Cards Container */
+.cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.about-card {
+  width: 300px;
+  text-align: left;
+}
+
+.about-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.about-card h3 {
+  font-size: 20px;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.about-card p {
+  font-size: 15px;
+  color: #777;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-card {
+    width: 90%;
+  }
+}
+
+/* ... and the rest of your CSS remains unchanged ... */
+
+
+/* ... and the rest of your CSS remains unchanged ... */
+.hero-section {
+  background: url('ima.jpeg') no-repeat center center/cover;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+}
+
+.hero-overlay {
+  background-color: #e7d6c8; /* optional dark overlay */
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.subheading {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.hero-overlay h1 {
+  color: white;
+  font-size: 40px;
+  line-height: 1.4;
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+}
+
+.btn {
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  padding: 12px 24px;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #f0f0f0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-overlay h1 {
+    font-size: 28px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+.menu-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+.section-subtitle {
+  color: red;
+  font-family: 'Great Vibes', cursive;
+  font-size: 22px;
+}
+.hero-title {
+  color: red; /* Ya white (#fff) jo bhi aap chaho */
+  font-size: 36px;
+   margin-bottom: 50px;
+ font-family: Georgia, serif;
+}
+.filter-tabs {
+  margin-bottom: 30px;
+}
+
+.filter-tabs button {
+  background: none;
+  border: none;
+  font-weight: bold;
+  font-size: 14px;
+  margin: 0 10px;
+  cursor: pointer;
+  color: #e7d6c8;
+  transition: 0.3s;
+}
+
+.filter-tabs button.active,
+.filter-tabs button:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.menu-card {
+  display: flex;
+  border: 1px dotted #ccc;
+  padding: 10px;
+  align-items: center;
+  background: #fff;
+}
+
+.menu-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 15px;
+  border-radius: 5px;
+}
+
+.menu-info {
+  text-align: left;
+}
+
+.menu-info h4 {
+  font-size: 16px;
+  margin: 0;
+   color: black;
+}
+
+.menu-info h4 span {
+  color: red;
+}
+
+.menu-info p {
+  font-size: 12px;
+  color: black;
+}
+
+.full-menu-btn {
+  margin-top: 40px;
+}
+
+.btn-black {
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 3px;
+}
+.footer {
+  background-color: #111;
+  color: #ccc;
+  padding: 60px 20px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 40px;
+}
+
+.footer-column {
+  max-width: 280px;
+  text-align: left;
+}
+
+.footer-column h4 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.footer-column p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.social-icons a {
+  color: #ccc;
+  margin-right: 10px;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #fff;
+}
+
+.subscribe-box {
+  margin-top: 20px;
+}
+
+.subscribe-box h5 {
+  color: #ccc;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.subscribe-box form {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  margin: auto;
+  max-width: 400px;
+}
+
+.subscribe-box input {
+  padding: 10px;
+  border: none;
+  outline: none;
+  width: 75%;
+}
+
+.subscribe-box button {
+  background-color: #222;
+  border: none;
+  padding: 10px 15px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.subscribe-box button:hover {
+  background-color: red;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  margin-top: 40px;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-bottom a {
+  color: #fff;
+  margin: 0 8px;
+  text-decoration: none;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  background: white;
+  padding-top: 60px;
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 8s linear infinite;
+}
+
+.carousel-track img {
+  width: 300px;
+  height: auto;
+  margin-right: 5px;
+  object-fit: cover;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  flex-wrap: wrap;
+}
+
+.phone-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+}
+
+.phone-mockup {
+  width: 300px;
+  height: 620px;
+  border: 14px solid #000;
+  border-radius: 40px;
+  position: relative;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.phone-mockup img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-section {
+  flex: 1;
+  padding: 30px;
+  max-width: 500px;
+  min-width: 300px;
+}
+
+.subtitle {
+  color: #d72638;
+  font-family: 'Brush Script MT', cursive;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 38px;
+  margin: 0 0 20px;
+}
+
+.description {
+  color: #6c6c6c;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border: 1px solid #000;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #000;
+  background: #fff;
+  font-size: 14px;
+  line-height: 1.2;
+  transition: all 0.3s ease;
+}
+
+.btn img {
+  width: 28px;
+  height: 28px;
+  margin-right: 10px;
+}
+
+.btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+.btn:hover img {
+  filter: brightness(0) invert(1);
+}
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+  gap: 15px;
+}
+
+.booking-form input {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+/* ✅ HAMBURGER STYLES */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 999;
+}
+
+/* ✅ MEDIA QUERIES FOR RESPONSIVENESS */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+.menu-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    z-index: 1001;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1e161f;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+  }
+.nav-links a {
+    padding: 10px 20px;
+    text-align: left;
+    color: white;
+    text-decoration: none;
+    display: block;
+  }
+ .nav-links.show {
+    display: flex;
+}
+}
